@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>できたね！ジグソーパズル</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app" aria-label="ジグソーパズル">
+      <header class="topbar">
+        <div>
+          <p class="level">3 x 5</p>
+          <h1 id="gameTitle">できるかな？</h1>
+        </div>
+        <button class="reset-button" id="resetButton" type="button" aria-label="まぜる">
+          <span aria-hidden="true">↻</span>
+          <span>まぜる</span>
+        </button>
+      </header>
+
+      <nav class="puzzle-picker" id="puzzlePicker" aria-label="パズルをえらぶ"></nav>
+
+      <section class="play-area" aria-label="パズルゲーム">
+        <div class="board-shell">
+          <div class="board" id="board" aria-label="パズルをはめる場所"></div>
+        </div>
+
+        <div class="tray-shell">
+          <div class="tray" id="tray" aria-label="パズルのピース"></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="finish-screen" id="finishScreen" hidden>
+      <canvas class="confetti" id="confettiCanvas" aria-hidden="true"></canvas>
+      <div class="finish-message" role="status" aria-live="polite">
+        <p>できたね！</p>
+        <button class="again-button" id="againButton" type="button">もういちど</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
